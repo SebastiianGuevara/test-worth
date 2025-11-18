@@ -1764,35 +1764,42 @@
       }
 
       /* =========================================================
-   AJUSTE ESPECIAL PARA IPHONE (Super Retina XDR)
-   Hace que rojo y verde sean HIPER–opacos SOLO en iOS.
+   AJUSTE SOLO PARA iPhone – Detectado por User-Agent
    ========================================================= */
-      @supports (-webkit-touch-callout: none) {
-
-  /* 🔴 Rojo especial para iPhone */
-  .dot-red,
-  .dot-red-1,
-  .mini-dot-red-1 {
-    background: rgb(35, 0, 0) !important;
-  }
-
-  /* 🟢 Verde especial para iPhone */
-  .dot-red-right,
-  .dot-red-2,
-  .dot-green,
-  .dot-green-test,
-  .mini-dot-green {
-    background: rgb(0, 35, 0) !important;
-  }
-
-  /* ⚪ Blanco siempre visible */
-  .dot-white,
-  .dot-white-test,
-  .mini-dot-white {
-    background: #ffffff !important;
-    box-shadow: 0 0 22px rgba(255,255,255,0.95) !important;
+@media screen and (min-width: 0px) {
+  :root {
+    --is-iphone: 0;
   }
 }
+
+@supports (-webkit-overflow-scrolling: touch) {
+  :root {
+    --is-iphone: 1;
+  }
+}
+
+/* Estilos solo si es iPhone */
+:root[style*="--is-iphone: 1"] .dot-red,
+:root[style*="--is-iphone: 1"] .dot-red-1,
+:root[style*="--is-iphone: 1"] .mini-dot-red-1 {
+  background: rgb(35, 0, 0) !important;
+}
+
+:root[style*="--is-iphone: 1"] .dot-green,
+:root[style*="--is-iphone: 1"] .dot-red-right,
+:root[style*="--is-iphone: 1"] .dot-red-2,
+:root[style*="--is-iphone: 1"] .dot-green-test,
+:root[style*="--is-iphone: 1"] .mini-dot-green {
+  background: rgb(0, 35, 0) !important;
+}
+
+/* Blanco igual en iPhone */
+:root[style*="--is-iphone: 1"] .dot-white,
+:root[style*="--is-iphone: 1"] .dot-white-test {
+  background: #fff !important;
+  box-shadow: 0 0 22px rgba(255,255,255,0.95) !important;
+}
+
 
     </style>
   </head>
@@ -2875,4 +2882,5 @@
     </script>
   </body>
 </html>
+
 
