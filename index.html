@@ -1768,39 +1768,32 @@
    Hace que rojo y verde sean HIPER–opacos SOLO en iOS.
    ========================================================= */
       @supports (-webkit-touch-callout: none) {
-        /* 🔴 Rojo hiper–opaco solo en iPhone */
-        .dot-red,
-        .dot-red-1,
-        .mini-dot-red-1,
-        .pattern-fusion .mini-dot-red-1,
-        .pattern-supresion-oi .mini-dot-red-1,
-        .pattern-endo .mini-dot-red-1,
-        .pattern-endo .mini-dot-red-2 {
-          background: rgb(8, 0, 0) !important;
-        }
 
-        /* 🟢 Verde hiper–opaco solo en iPhone */
-        .dot-red-right,
-        .dot-red-2,
-        .dot-green,
-        .dot-green-test,
-        .mini-dot-green,
-        .mini-dot-green-1,
-        .mini-dot-green-2,
-        .mini-dot-green-3,
-        .pattern-fusion .mini-dot-red-2,
-        .pattern-fusion .mini-dot-green {
-          background: rgb(0, 8, 0) !important;
-        }
+  /* 🔴 Rojo especial para iPhone */
+  .dot-red,
+  .dot-red-1,
+  .mini-dot-red-1 {
+    background: rgb(35, 0, 0) !important;
+  }
 
-        /* ❗ Mantener blanco brillante */
-        .dot-white,
-        .dot-white-test,
-        .mini-dot-white {
-          background: #ffffff !important;
-          box-shadow: 0 0 22px rgba(255, 255, 255, 0.95) !important;
-        }
-      }
+  /* 🟢 Verde especial para iPhone */
+  .dot-red-right,
+  .dot-red-2,
+  .dot-green,
+  .dot-green-test,
+  .mini-dot-green {
+    background: rgb(0, 35, 0) !important;
+  }
+
+  /* ⚪ Blanco siempre visible */
+  .dot-white,
+  .dot-white-test,
+  .mini-dot-white {
+    background: #ffffff !important;
+    box-shadow: 0 0 22px rgba(255,255,255,0.95) !important;
+  }
+}
+
     </style>
   </head>
   <body>
@@ -2882,3 +2875,4 @@
     </script>
   </body>
 </html>
+
