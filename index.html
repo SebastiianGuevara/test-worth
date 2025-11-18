@@ -1763,7 +1763,7 @@
         }
       }
 
-      /* =========================================================
+/* =========================================================
    AJUSTE SOLO PARA iPhone – Detectado por User-Agent
    ========================================================= */
 @media screen and (min-width: 0px) {
@@ -1778,27 +1778,30 @@
   }
 }
 
-/* Estilos solo si es iPhone */
+/* 🔴 Rojo ULTRA OPACO para desaparecer en filtro verde */
 :root[style*="--is-iphone: 1"] .dot-red,
 :root[style*="--is-iphone: 1"] .dot-red-1,
 :root[style*="--is-iphone: 1"] .mini-dot-red-1 {
-  background: rgb(35, 0, 0) !important;
+  background: rgb(25, 0, 0) !important;
 }
 
+/* 🟢 Verde ULTRA OPACO para desaparecer en filtro rojo */
 :root[style*="--is-iphone: 1"] .dot-green,
 :root[style*="--is-iphone: 1"] .dot-red-right,
 :root[style*="--is-iphone: 1"] .dot-red-2,
 :root[style*="--is-iphone: 1"] .dot-green-test,
 :root[style*="--is-iphone: 1"] .mini-dot-green {
-  background: rgb(0, 35, 0) !important;
+  background: rgb(0, 20, 0) !important;
 }
 
-/* Blanco igual en iPhone */
+/* ⚪ Blanco brillante */
 :root[style*="--is-iphone: 1"] .dot-white,
-:root[style*="--is-iphone: 1"] .dot-white-test {
-  background: #fff !important;
-  box-shadow: 0 0 22px rgba(255,255,255,0.95) !important;
+:root[style*="--is-iphone: 1"] .dot-white-test,
+:root[style*="--is-iphone: 1"] .mini-dot-white {
+  background: #ffffff !important;
+  box-shadow: 0 0 25px rgba(255,255,255,0.95) !important;
 }
+
 
 
     </style>
@@ -2882,5 +2885,6 @@
     </script>
   </body>
 </html>
+
 
 
