@@ -827,14 +827,14 @@
 
       /* rojo/verde laterales, también algo más apagados */
       .dot-red-2 {
-        background: rgb(0, 35, 0);
+        background: rgb(0, 30, 0);
         top: 50%;
         left: 15%;
         transform: translateY(-50%);
       }
 
       .dot-green-test {
-        background: rgb(0, 35, 0);
+        background: rgb(0, 30, 0);
         top: 50%;
         right: 15%;
         transform: translateY(-50%);
@@ -1761,42 +1761,6 @@
           font-size: 0.75rem;
           margin-top: 10px;
         }
-      }
-      /* =========================================================
-   AJUSTE SOLO PARA iPhone – Detectado por User-Agent
-   ========================================================= */
-      @media screen and (min-width: 0px) {
-        :root {
-          --is-iphone: 0;
-        }
-      }
-
-      @supports (-webkit-overflow-scrolling: touch) {
-        :root {
-          --is-iphone: 1;
-        }
-      }
-
-      /* Estilos solo si es iPhone */
-      :root[style*="--is-iphone: 1"] .dot-red,
-      :root[style*="--is-iphone: 1"] .dot-red-1,
-      :root[style*="--is-iphone: 1"] .mini-dot-red-1 {
-        background: rgb(35, 0, 0) !important;
-      }
-
-      :root[style*="--is-iphone: 1"] .dot-green,
-      :root[style*="--is-iphone: 1"] .dot-red-right,
-      :root[style*="--is-iphone: 1"] .dot-red-2,
-      :root[style*="--is-iphone: 1"] .dot-green-test,
-      :root[style*="--is-iphone: 1"] .mini-dot-green {
-        background: rgb(0, 35, 0) !important;
-      }
-
-      /* Blanco igual en iPhone */
-      :root[style*="--is-iphone: 1"] .dot-white,
-      :root[style*="--is-iphone: 1"] .dot-white-test {
-        background: #fff !important;
-        box-shadow: 0 0 22px rgba(255, 255, 255, 0.95) !important;
       }
     </style>
   </head>
